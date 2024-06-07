@@ -17,6 +17,7 @@ import (
 	"github.com/testcontainers/testcontainers-go"
 )
 
+// create container and return database, close container function and error
 func getDatabase(ctx context.Context) (database *mongo.Database, close func(ctx context.Context), err error) {
 	var env = map[string]string{
 		"MONGO_INITDB_ROOT_USERNAME":   "root",
